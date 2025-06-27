@@ -29,8 +29,10 @@ a:hover
     grid-row: 1;
     grid-column: 3;
 
-    width: 50%;
-    height: 10%;
+    margin-top: 10px;
+    margin-right: 30px;
+
+    font-size: 1.2em;
 }
 
 #language-selectorIT
@@ -38,8 +40,43 @@ a:hover
     grid-row: 1;
     grid-column: 3;
 
-    width: 50%;
-    height: 10%;
+    margin-top: 10px;
+    margin-right: 30px;
+
+    font-size: 1.2em;
+}
+
+#notes-selector
+{
+    grid-row: 1;
+    grid-column: 3;
+
+    margin-top: 50px;
+    margin-right: 30px;
+
+    font-size: 1.2em;
+}
+
+#about-selector
+{
+    grid-row: 1;
+    grid-column: 3;
+
+    margin-top: 90px;
+    margin-right: 30px;
+
+    font-size: 1.2em;
+}
+
+#back-selector
+{
+    grid-row: 1;
+    grid-column: 3;
+
+    margin-top: 10px;
+    margin-right: 30px;
+
+    font-size: 1.2em;
 }
 
 #parent-container
@@ -52,6 +89,34 @@ a:hover
     height: 100vh;
 
     content: center;
+}
+
+#about-container
+{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto auto auto;
+
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+
+    content: center;
+}
+
+#menu-container
+{
+    grid-row: 1;
+    grid-column: 3;
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+
+    width: 100%;
+    height: 100%;
+
+    text-align: right;
 }
 
 #scene

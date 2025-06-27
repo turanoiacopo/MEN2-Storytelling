@@ -42,27 +42,6 @@ function language_manager()
 }
 
 //---------------------------------------------
-function scene_manager(scene)
-//---------------------------------------------
-{
-    switch(scene) {
-        case "premise":
-            break;
-        case "conclusion":
-            break;
-        case "rectangles":
-            break;
-        case "senses":
-            break;
-        case "remember":
-            break;
-        default:
-            console.log('scene manager error');
-            break;
-    }
-}
-
-//---------------------------------------------
 function scene_premise()
 //---------------------------------------------
 {
@@ -93,7 +72,9 @@ function scene_conclusion()
     scene_manager("conclusion");
 }
 
+//---------------------------------------------
 function scene_remember() 
+//---------------------------------------------
 {
     Object.keys(texts).forEach(key => {
         const titleElement = document.createElement('div');
@@ -114,8 +95,11 @@ function scene_remember()
                 case 'rectangles':
                     scene_rectangles();
                     break;
-                case 'senses':
-                    scene_senses();
+                case 'jailer':
+                    scene_jailer();
+                    break;
+                case 'klein':
+                    scene_klein();
                     break;
                 default:
                     console.log('Unknown scene key:', key);
@@ -140,10 +124,57 @@ function scene_remember()
 
 
 //---------------------------------------------
-function scene_senses()
+function scene_klein()
 //---------------------------------------------
 {
-    scene_manager("senses");
+    const body = document.createElement('p');
+    const rememberButton = document.createElement('a');
+
+    scene.append(body);
+    scene.append(rememberButton);
+
+    rememberButton.innerHTML = "Remember";
+
+    scene.style.gridTemplateColumns = "1fr 2fr 1fr";
+    scene.style.gridTemplateRows = "auto";
+    scene.style.overflow = "scroll";
+
+    body.style.fontSize = "1.5em";
+    body.innerHTML = texts.klein.body;
+
+    rememberButton.addEventListener("click", () => {
+        scene.innerHTML = '';
+        scene.style.overflow = "hidden";
+
+        scene_remember();
+    });
+}
+
+//---------------------------------------------
+function scene_jailer()
+//---------------------------------------------
+{
+    const body = document.createElement('p');
+    const rememberButton = document.createElement('a');
+
+    scene.append(body);
+    scene.append(rememberButton);
+
+    rememberButton.innerHTML = "Remember";
+
+    scene.style.gridTemplateColumns = "1fr 2fr 1fr";
+    scene.style.gridTemplateRows = "auto";
+    scene.style.overflow = "scroll";
+
+    body.style.fontSize = "1.5em";
+    body.innerHTML = texts.jailer.body;
+
+    rememberButton.addEventListener("click", () => {
+        scene.innerHTML = '';
+        scene.style.overflow = "hidden";
+
+        scene_remember();
+    });
 }
 
 //---------------------------------------------
@@ -182,8 +213,8 @@ function animateFloating(el) {
         const maxTop = container.height - el.offsetHeight;
         const maxLeft = container.width - el.offsetWidth;
 
-        const deltaX = (Math.random() - 0.5) * 100;
-        const deltaY = (Math.random() - 0.5) * 100;
+        const deltaX = (Math.random() - 0.5) * 500;
+        const deltaY = (Math.random() - 0.5) * 500;
 
         const currentTop = parseFloat(el.style.top);
         const currentLeft = parseFloat(el.style.left);

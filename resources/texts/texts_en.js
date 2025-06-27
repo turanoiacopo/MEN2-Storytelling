@@ -2,12 +2,12 @@ const textsEN = {
     "premise": {
         "title": "Premise",
         "body": `My cell is 71.52 light-years away from planet Earth. It orbits around the black hole RS 8513-928-8-5906646-198, where I was sent for reasons I no longer remember. This is what I know about myself: the entire front of my body from the neck down, and the back of my legs.<br>
-                When I feel hungry, I eat a ration of food.<br>
+                <br>When I feel hungry, I eat a ration of food.<br>
                 When I feel thirsty, I drink a ration of water.<br>
                 When I feel bored, I read one of the books on the shelf in my cell.<br>
                 When I am neither hungry nor thirsty nor bored, I do nothing.<br>
-                A thought unsettles me. Since I no longer know the fate of the human species, it would be unrealistic to rule out the possibility that I am the last human alive. For some reason, I feel the need to remember my past in order to preserve it for as long as possible.<br>
-                From now on, when I am neither hungry nor thirsty nor bored, I will try to remember who I am.<br>`,
+                <br>A thought unsettles me. Since I no longer know the fate of the human species, it would be unrealistic to rule out the possibility that I am the last human alive. For some reason, I feel the need to remember my past in order to preserve it for as long as possible.<br>
+                <br>From now on, when I am neither hungry nor thirsty nor bored, I will try to remember who I am.<br>`,
     },
 
     "conclusion": {
@@ -43,8 +43,51 @@ const textsEN = {
                 Ah, I get it now!<br>`
     },
 
-    "senses": {
-        "title": "Not enough senses",
-        "body": "This is a test body for senses.",
+    "jailer": {
+        "title": "To my jailer",
+        "body": `At the sunset of the universe, where the last stars suffer the death of their hydrogen by turning red and the last civilizations chase their dying warmth, a presence at the edge of nothingness&mdash;where nothing no longer exists&mdash;finds, in a brief moment of clarity, a way to halt its morbid search for something&mdash;of which there is no longer anything&mdash;to devote its thoughts to the one who conceived it.<br>
+                <br>
+                That presence is me.<br>
+                The walls of my cell reflect nothing&mdash;certainly not my image. For all I know, my head could be made of some colorless, tasteless, odorless, soundless, intangible substance. I see the rest of my body when I lower my gaze, when I raise my arms, when I turn my legs. The rest remains forgotten.<br>
+                Forgotten because my jailer made sure it would be so. But don&rsquo;t misunderstand me: I&rsquo;m not talking about those who bound me to what is most unreachable in the universe. I&rsquo;m talking about the one who made it possible.<br>
+                <br>
+                I&rsquo;m talking about you.<br>
+                I wish I could say this speech has no spiritual connotation, but the absurdity of speaking to someone who has no way of existing here and now makes this as valid as a prayer. Anyway, I have no way of knowing whether the one who existed before the current me was some monk used to chanting at the foot of some altar or not.<br>
+                In a very different situation, I imagine I would feel furious or desperate. The problem is that, in here, keeping track of what happens makes little sense. Maybe I was furious for months, desperate for years&mdash;but even if so, those emotions would have been replaced by the rest of the nothingness that makes up most of the time here. If time is even still a thing. Any event here, insignificant or gargantuan, doesn&rsquo;t amount to much compared to the void that will follow it. Nothing I can do or be has any meaning. It didn&rsquo;t even have meaning before, when humans lived on that grain of sand called Earth in the middle of the universe&rsquo;s ocean. But at least that vastness could be conceptualized&mdash;somehow, faced.<br>
+                Certainly, leaving me here for eternity isn&rsquo;t exactly an exciting prospect. So, you decided to play with my humanity. With the realization of the inevitable extinction of the human species, an irresistible survival instinct forces me on long journeys through memories that aren&rsquo;t mine&mdash;maybe not even real&mdash;searching for an identity, a reason, a story. Again, what might seem like an anomaly&mdash;this realization&mdash;has no value. It could have happened a moment ago, or centuries from now. Regardless, it exists somewhere. But you aren&rsquo;t particularly romantic. Happy endings don&rsquo;t suit you. I am not meant to remember anything useful. My hunger for information will never be satisfied. Concepts blur, recreate, and rewrite themselves&mdash;because in the middle of nothingness, the brain cannot settle for nothing.<br>
+                The tragedy of this story, however, is that I don&rsquo;t care. These delirious attempts provoke nothing in me. As I said, it wouldn&rsquo;t make sense anyway.<br>
+                The truth is, this experience doesn&rsquo;t belong to me. If it&rsquo;s meant to be useful, then it would be so elsewhere. Somewhere time still exists. Where getting angry still means breaking things. Where despair still makes your stomach heavy. Where isolating yourself still means confusing what still exists with what no longer does.<br>
+                I suppose that is my purpose.<br>`,
+    },
+
+    "klein": {
+        "title": "Fitting a cat in a Klein bottle",
+        "body": `My cell is 71.52 light years away from planet Earth. It orbits the black hole RS 8513-928-8-5906646-198, around which I was sent for reasons I no longer remember. Of myself, I know the following: the entire front of my body from the neck down, and the backs of my legs. When I feel hungry, I eat a food ration. When I feel thirsty, I drink a water ration. When I feel bored, I read one of the books on the cell's shelf. When I am not hungry or thirsty or bored, I do nothing.<br>
+                This is my sentence: a 27-cubic-meter titanium cube powered by a radioisotope thermoelectric generator, which also keeps the environment at a constant temperature of 18 degrees Celsius; high-calorie food rations are estimated to last several decades, and the water is purified and recycled. A LED lamp hangs from the ceiling and lights up the room. Right beneath the lamp is a hatch. If I ever decided to end my sentence, I would have to open it wide and let the vacuum of space fill the cell. Finally, the cube is locked in orbit around that celestial body one must always avoid. Trying to reach me would be too dangerous, even for the most reckless of explorers.<br>
+                Fortunately, I&rsquo;m not alone here. My roommates hide inside the books. There are many tiny little people living in them. Truth be told, they&rsquo;re always the same ones, but in different books they wear different faces. For example, in the blue book they&rsquo;re all fussy and keep to their own space. In the orange one, they&rsquo;re always having fun and everyone is smiling. In the yellow one, they&rsquo;re all homesick and a bit sad. In the green one, they&rsquo;re all dancing, twirling and leaping all over the place. The red one never opens. Under no circumstances. The roommates get angry immediately. <br>
+                The Loquacious Cat always lies beside the mattress. It came and never left again. Sometimes the Loquacious Cat feels hungry, so I give it part of my food ration. Sometimes the Loquacious Cat feels thirsty, so I give it part of my water ration. Sometimes the Loquacious Cat feels bored, so it talks. When the Loquacious Cat isn&rsquo;t hungry, or thirsty, or bored, it does nothing. <br>
+                &laquo;Loquacious Cat, when did you arrive?&raquo;<br>
+                &laquo;Yesterday. Today. Tomorrow. What difference does it make?&raquo;<br>
+                The Loquacious Cat is right. These differences mean nothing to me. In the middle of nothingness, everything that happens loses its meaning. Not even &ldquo;when&rdquo; matters anymore. If stories sprout from my head, they might have happened thousands of years ago, or just a few hours ago, or they&rsquo;re happening now, or they haven&rsquo;t happened yet.<br>
+                Now I stand still. Now I walk. If I feel my legs vanish, I walk. If I feel my legs give out, I stop. You must always be very careful not to step on the hatch. Who knows, it might suddenly give way. So I always end up circling around it. Sometimes the Loquacious Cat joins me on the walk. It waves between my legs or follows behind me. The Loquacious Cat, however, walks right over the hatch. But the Loquacious Cat is light, so it&rsquo;s as if the hatch just gently strokes it. <br>
+                &laquo;Loquacious Cat, would you like to read a book?&raquo;<br>
+                I slide the blue book off the shelf and let the roommates out. <br>
+                &laquo;Loquacious Cat, see? How fussy these characters are!&raquo;<br>
+                &laquo;That&rsquo;s not how you read a book&raquo;<br>
+                The Loquacious Cat explains that it&rsquo;s not enough to stare at the pages to bring the characters out. I have to force the little people to stay close together and line up one after the other. I try and I try again. The roommates are gone. <br>
+                &ldquo;Anonymous functions are a form of nested function, allowing access to the variables within the scope of the containing function (non-local variables). Though they are named like nested functions, they cannot be recursive without the aid of a fixed-point combinator (a higher-order function), which in this case is referred to as an anonymous fixpoint or anonymous recursion.&rdquo; <br>
+                &laquo;Loquacious Cat, are all books like this?&raquo;<br>
+                I pick up the green book. <br>
+                &ldquo;Who is this that obscures my plans with words without knowledge? Brace yourself like a man; I will question you, and you shall answer me. Where were you when I laid the earth&rsquo;s foundation? Tell me, if you understand. Who marked off its dimensions? Surely you know! Who stretched a measuring line across it?&rdquo;<br>
+                Losing my roommates made me hungry. The food ration tears open and slides out, leaving a small beige parallelepiped&mdash;hard and brittle. The Loquacious Cat stares at me intensely. The Loquacious Cat wants to eat too. The ration breaks easily; crumbs fall to the floor and the Loquacious Cat pounces on them. I leave a small piece on the ground, which the Loquacious Cat devours. I finish my portion while watching the Loquacious Cat chew his. I&rsquo;m left with the taste of a ball of yarn. <br>
+                The Loquacious Cat leaves. Or so he says. <br>
+                &laquo;Loquacious Cat, where are you going?&raquo;<br>
+                &laquo;I&rsquo;m going to witness the end of the universe. If any remain, the last living beings have taken refuge around the final red giants. But even those will run out of hydrogen, putting an end to entropy itself&raquo;<br>
+                &laquo;Loquacious Cat, how can any of this be true?&raquo;<br>
+                &laquo;Don&rsquo;t you know? Around the black hole, time stagnates because of relativity. But outside, everything keeps going. There&rsquo;s no one else in the universe who finds themselves in your condition. Your sentence begins now&raquo;<br>
+                &laquo;Loquacious Cat, please don&rsquo;t go&raquo;<br>
+                The Loquacious Cat is no longer here. The red book doesn&rsquo;t get angry anymore. I hope it lashes out every time I open it, but it doesn&rsquo;t seem to want to anymore. Someone has to make me feel bad. Someone has to hold my crimes against me. Only the worst kind of criminal could deserve this sentence. Get angry, red book! Tell me I was wrong; tell me I&rsquo;m not worthy of life! Scream at me like I&rsquo;m screaming at you! Remind me of the unimaginable suffering I caused to those around me! Tell me those who locked me outside of time were right! Because if they weren&rsquo;t - if there really is no reason, if it&rsquo;s all by chance - then I cannot find peace. <br>
+                The red book stays silent. It&rsquo;s the hatch that speaks. Someone is knocking. Maybe someone survived the universe&rsquo;s fate. Maybe the Loquacious Cat changed his mind. Maybe another inmate found a way to escape. But who could possibly be knocking here, where nothing remains? I fear that outside, there is no one. I fear that I am the one knocking. I fear that answering this call would be a grave mistake. <br>
+                The LED lamp has stopped flooding the room with its light. The books dance around the room among the crumbs of rations. Without even realizing it, I&rsquo;m inside a Klein bottle.<br>`
     }
 }
