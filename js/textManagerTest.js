@@ -67,7 +67,7 @@ function scene_premise()
 //---------------------------------------------
 {
     const body = document.createElement('p');
-    const rememberButton = document.createElement('button');
+    const rememberButton = document.createElement('a');
     
     scene.append(body);
     scene.append(rememberButton);
@@ -76,11 +76,11 @@ function scene_premise()
 
     grid.style.gridTemplateColumns = "1fr 3fr 1fr";
 
+    body.style.fontSize = "1.5em";
     body.innerHTML = texts.premise.body;
 
     rememberButton.addEventListener("click", () => {
-        body.remove();
-        rememberButton.remove();
+        scene.innerHTML = '';
 
         scene_remember();
     });
@@ -93,16 +93,51 @@ function scene_conclusion()
     scene_manager("conclusion");
 }
 
-//---------------------------------------------
-function scene_remember()
-//---------------------------------------------
+function scene_remember() 
 {
-    const body = document.createElement('p');
-    scene.append(body);
+    Object.keys(texts).forEach(key => {
+        const titleElement = document.createElement('div');
+        titleElement.classList.add('floating-title');
+        titleElement.innerText = texts[key].title;
 
-    body.innerHTML = "ciao"
-    scene_manager("remember");
+        // Click handler to launch the correct scene
+        titleElement.addEventListener('click', () => {
+            scene.innerHTML = '';
+
+            switch (key) {
+                case 'premise':
+                    scene_premise();
+                    break;
+                case 'conclusion':
+                    scene_conclusion();
+                    break;
+                case 'rectangles':
+                    scene_rectangles();
+                    break;
+                case 'senses':
+                    scene_senses();
+                    break;
+                default:
+                    console.log('Unknown scene key:', key);
+                    break;
+            }
+        });
+
+        scene.appendChild(titleElement);
+
+        // Random animation start position (in pixels)
+        const container = scene.getBoundingClientRect();
+        const maxTop = container.height - 50; // approximate element height
+        const maxLeft = container.width - 150; // approximate element width
+
+        titleElement.style.top = `${Math.random() * maxTop}px`;
+        titleElement.style.left = `${Math.random() * maxLeft}px`;
+
+        // Optional: Start floating
+        animateFloating(titleElement);
+    });
 }
+
 
 //---------------------------------------------
 function scene_senses()
@@ -117,3 +152,32 @@ function scene_rectangles()
 {
     scene_manager("rectangles");
 }
+
+function animateFloating(el) {
+    const move = () => {
+        const container = scene.getBoundingClientRect();
+        const elRect = el.getBoundingClientRect();
+
+        const maxTop = container.height - el.offsetHeight;
+        const maxLeft = container.width - el.offsetWidth;
+
+        const deltaX = (Math.random() - 0.5) * 100;
+        const deltaY = (Math.random() - 0.5) * 100;
+
+        const currentTop = parseFloat(el.style.top);
+        const currentLeft = parseFloat(el.style.left);
+
+        let newTop = currentTop + deltaY;
+        let newLeft = currentLeft + deltaX;
+
+        // Clamp to bounds
+        newTop = Math.max(0, Math.min(maxTop, newTop));
+        newLeft = Math.max(0, Math.min(maxLeft, newLeft));
+
+        el.style.top = `${newTop}px`;
+        el.style.left = `${newLeft}px`;
+    };
+
+    setInterval(move, 1);
+}
+
