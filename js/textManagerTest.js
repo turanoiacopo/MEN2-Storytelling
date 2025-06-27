@@ -10,6 +10,7 @@ const grid = document.getElementById('parent-container');
 // Global variables
 
 let texts = 0;
+let rememberString = '';
 
 ////////////////////////////////////////////////
 // Main
@@ -30,9 +31,11 @@ function language_manager()
     switch(language) {
         case 'en':
             texts = textsEN;
+            rememberString = "Remember";
             break;
         case 'it':
             texts = textsIT;
+            rememberString = "Ricorda";
             break;
         default:
             console.log('language manager error');
@@ -51,7 +54,8 @@ function scene_premise()
     scene.append(body);
     scene.append(rememberButton);
 
-    rememberButton.innerHTML = "Remember";
+    rememberButton.classList.add('remember-button');
+    rememberButton.innerHTML = rememberString;
 
     grid.style.gridTemplateColumns = "1fr 3fr 1fr";
 
@@ -69,7 +73,27 @@ function scene_premise()
 function scene_conclusion()
 //---------------------------------------------
 {
-    scene_manager("conclusion");
+    const body = document.createElement('p');
+    const rememberButton = document.createElement('a');
+
+    scene.append(body);
+    scene.append(rememberButton);
+
+    rememberButton.classList.add('remember-button');
+    rememberButton.innerHTML = rememberString;
+
+    scene.style.gridTemplateColumns = "1fr 2fr 1fr";
+    scene.style.gridTemplateRows = "auto";
+
+    body.style.fontSize = "1.5em";
+    body.innerHTML = texts.conclusion.body;
+
+    rememberButton.addEventListener("click", () => {
+        scene.innerHTML = '';
+        scene.style.overflow = "hidden";
+
+        scene_remember();
+    });
 }
 
 //---------------------------------------------
@@ -133,7 +157,8 @@ function scene_klein()
     scene.append(body);
     scene.append(rememberButton);
 
-    rememberButton.innerHTML = "Remember";
+    rememberButton.classList.add('remember-button');
+    rememberButton.innerHTML = rememberString;
 
     scene.style.gridTemplateColumns = "1fr 2fr 1fr";
     scene.style.gridTemplateRows = "auto";
@@ -160,7 +185,8 @@ function scene_jailer()
     scene.append(body);
     scene.append(rememberButton);
 
-    rememberButton.innerHTML = "Remember";
+    rememberButton.classList.add('remember-button');
+    rememberButton.innerHTML = rememberString;
 
     scene.style.gridTemplateColumns = "1fr 2fr 1fr";
     scene.style.gridTemplateRows = "auto";
@@ -187,7 +213,8 @@ function scene_rectangles()
     scene.append(body);
     scene.append(rememberButton);
 
-    rememberButton.innerHTML = "Remember";
+    rememberButton.classList.add('remember-button');
+    rememberButton.innerHTML = rememberString;
 
     scene.style.gridTemplateColumns = "1fr 2fr 1fr";
     scene.style.gridTemplateRows = "auto";
@@ -205,7 +232,10 @@ function scene_rectangles()
     });
 }
 
-function animateFloating(el) {
+//---------------------------------------------
+function animateFloating(el) 
+//---------------------------------------------
+{
     const move = () => {
         const container = scene.getBoundingClientRect();
         const elRect = el.getBoundingClientRect();
