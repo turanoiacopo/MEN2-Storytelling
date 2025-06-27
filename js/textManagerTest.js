@@ -150,7 +150,28 @@ function scene_senses()
 function scene_rectangles()
 //---------------------------------------------
 {
-    scene_manager("rectangles");
+    const body = document.createElement('p');
+    const rememberButton = document.createElement('a');
+
+    scene.append(body);
+    scene.append(rememberButton);
+
+    rememberButton.innerHTML = "Remember";
+
+    scene.style.gridTemplateColumns = "1fr 2fr 1fr";
+    scene.style.gridTemplateRows = "auto";
+    scene.style.overflow = "scroll";
+
+    body.style.fontSize = "1.5em";
+    body.style.textAlign = "justify";
+    body.innerHTML = texts.rectangles.body;
+
+    rememberButton.addEventListener("click", () => {
+        scene.innerHTML = '';
+        scene.style.overflow = "hidden";
+
+        scene_remember();
+    });
 }
 
 function animateFloating(el) {
